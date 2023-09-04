@@ -1,0 +1,79 @@
+{
+    // INFO: https://bufferings.hatenablog.com/entry/2020/06/11/233201
+    // INFO: https://techblog.roxx.co.jp/entry/2021/04/19/132838
+    "name": "recoursion-coding-enviroment-for-php",
+    "dockerComposeFile": "docker-compose.yml",
+    // docker-compose.ymlファイル内のどのサービスをVS Codeで操作するか指定する
+    "service": "app",
+    // ワークスペースを指定
+    "workspaceFolder": "/workspace",
+    // vscode でコンテナに接続した際のユーザーを指定する
+    "remoteUser": "user01",
+    // VSCodeを閉じたときのコンテナの挙動を指定
+    "shutdownAction": "stopCompose", // default -> stopCompose
+    // devcontainerで開いた時のvscode側の設定カスタマイズ
+    "customizations": {
+        // VS Code固有のプロパティを設定します
+        "vscode": {
+            // 拡張機能などの設定
+            "settings": {
+                /*****************************
+                * VS Codeの基本設定
+                ******************************/
+                // エディターのインデントのサイズを指定（デフォルトは4）
+                "editor.tabSize": 4,
+                /*****************************
+                * php-cs-fixer関連の設定
+                ******************************/
+                // 保存時に整形を実行する
+                "php-cs-fixer.onsave": true,
+                // HTMLファイルが含まれる場合も整形する
+                "php-cs-fixer.formatHtml": true,
+                // composerでphp-cs-fixerをインストールしておく
+                "php-cs-fixer.executablePath": "/workspace/public/vendor/bin/php-cs-fixer",
+                "php-cs-fixer.rules": "@PSR12",
+                "php-cs-fixer.config": ".php-cs-fixer.php;.php-cs-fixer.dist.php;.php_cs;.php_cs.dist",
+                "[php]": {
+                    // PHPで使用するデフォルトのフォーマッターをインストールした拡張機能に指定する
+                    "editor.defaultFormatter": "junstyle.php-cs-fixer"
+                },
+                /*****************************
+                * phpstan関連の設定
+                ******************************/
+                // phpstanがインストールされているディレクトリを指定
+                "phpstan.binPath": "/workspace/public",
+                // phpstan.neonが格納されているディレクトリを指定
+                "phpstan.configFile": "/workspace/public",
+                /*****************************
+                * PHP拡張機能共通の設定
+                ******************************/
+                // phpのバイナリファイルを指定
+                "php.validate.executablePath": "/usr/local/bin/php"
+                // 1009のエラーを許容する
+                // "intelephense.diagnostics.undefinedTypes": false,
+                // "intelephense.diagnostics.undefinedClassConstants": false,
+                // "intelephense.diagnostics.undefinedConstants": false,
+                // "intelephense.diagnostics.undefinedFunctions": false,
+                // "intelephense.diagnostics.undefinedMethods": false,
+                // "intelephense.diagnostics.undefinedProperties": false
+            },
+            // コンテナ内にインストールする拡張機能を指定する
+            "extensions": [
+                // PHP Debug
+                "xdebug.php-debug",
+                // PHP Namespace Resolver
+                "MehediDracula.php-namespace-resolver",
+                // PHP DocBlocker
+                "neilbrayfield.php-docblocker",
+                // phpstan
+                "SanderRonde.phpstan-vscode",
+                // PHP Intelephense
+                "bmewburn.vscode-intelephense-client",
+                // indent-rainbow
+                "oderwat.indent-rainbow",
+                // php cs fixer
+                "junstyle.php-cs-fixer"
+            ]
+        }
+    }
+}
