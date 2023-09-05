@@ -26,7 +26,13 @@ ENV COMPOSER_HOME /composer
 # コマンドが実行できるようにパスを通す
 ENV PATH $PATH:/composer/vendor/bin
 
+
+
 WORKDIR /workspace
 
 # ユーザーの追加
-RUN useradd -m -s /bin/bash user01
+RUN useradd -m -s /bin/bash user01 && \
+    # Xebugで使用するログファイルの作成とファイルへのアクセス権限を付与する
+    touch /var/log/xdebug.log && \
+    chown user01:user01 /var/log/xdebug.log && \
+    chmod 644 /var/log/xdebug.log
