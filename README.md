@@ -27,7 +27,19 @@ $ git clone git@github.com:shimanamisan/recoursion-backend-project-for-php.git
 3. VS Code のターミナルを開き、起動したコンテナにアタッチされていることを確認します。
 ![スクリーンショット 2023-07-30 095036](https://github.com/shimanamisan/php-test-object/assets/49751604/401d5ef6-5fa0-4e2a-baf2-698f300c5124)
 
-4. 該当のプロジェクトへ移動しコマンドを実行します。
+4. 開いたターミナルから`public`ディレクトリに移動し必要なパッケージをインストールします。
+```bash
+$ cd public
+
+$ composer install
+```
+
+5. 該当のプロジェクトへ移動しコマンドを実行します。
+```bash
+$ cd GuessTheNumberGame
+
+$ php index.php
+```
 
 # プロジェクト
 
