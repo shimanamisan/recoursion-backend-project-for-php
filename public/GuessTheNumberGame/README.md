@@ -8,4 +8,4 @@
 
 試行回数は1～10回の間でランダムに設定されます。
 
-![guess-the-number-game](https://github.com/shimanamisan/recoursion-backend-project-for-php/assets/49751604/3a7d07ca-d90e-468f-bf4b-e418fa1bb2ef)
+![guess-the-number-game](https://github.com/shimanamisan/recoursion-backend-project-for-php/assets/49751604/49903ad0-9bd4-4ae1-bb01-88c40cdd0c95)
