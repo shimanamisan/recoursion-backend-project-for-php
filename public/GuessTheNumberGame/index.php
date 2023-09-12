@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use Library\GenerateNumber;
+use GuessTheNumberGame\Library\GenerateNumber;
 
 $genNumber = new GenerateNumber();
 
