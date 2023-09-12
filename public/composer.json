@@ -10,5 +10,10 @@
         "allow-plugins": {
             "phpstan/extension-installer": true
         }
+    },
+    "autoload": {
+        "psr-4": {
+            "Library\\": "GuessTheNumberGame/Library"
+        }
     }
 }

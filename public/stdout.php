@@ -15,6 +15,6 @@ fflush($stdout);
 fclose($stdout);
 
 
-echo "What is your favorite food??\n";
+echo "あなたの好きな食べ物はなんですか？（入力して下さい）\n";
 $food = fgets(STDIN);
-echo "Thanks for letting me know your favorite food is " . trim($food) . "\n";
+echo "好きな食べ物が「" . trim($food) . "」だと教えてくれてありがとうございます。\n";
