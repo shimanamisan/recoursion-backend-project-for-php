@@ -2,16 +2,16 @@ version: "3.9"
 
 volumes:
   php-fpm-socket:
-    name: recoursion-coding-enviroment-for-php_php-fpm-socket
+    name: recoursion-backend-project-for-php_php-fpm-socket
 
 services:
 
   app:
-    container_name: recoursion-coding-enviroment-for-php-backend
+    container_name: recoursion-backend-project-for-php
     build:
       context: ./php
       dockerfile: ./Dockerfile
-    image: recoursion-coding-enviroment-for-php-backend:1.0
+    image: recoursion-backend-project-for-php:1.0
     volumes:
       - php-fpm-socket:/var/run/php-fpm
       - ../:/workspace:cached
