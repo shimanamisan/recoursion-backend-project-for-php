@@ -1,6 +1,6 @@
 <?php
 
-namespace Library;
+namespace GuessTheNumberGame\Library;
 
 /**
  * 乱数を生成して、ユーザーに答えを当てさせるクラス
