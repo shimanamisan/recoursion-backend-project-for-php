@@ -16,6 +16,10 @@ try {
 
     $handle->execute();
 
+    echo "正常に終了しました"
+
+    ecit(0);
+
 } catch(\Exception $e) {
 
     echo $e->getMessage();
