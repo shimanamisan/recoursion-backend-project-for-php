@@ -10,7 +10,7 @@ Recoursionバックエンドプロジェクト（PHP）
 
 # 使用方法
 
-Docker と VS Code の拡張機能 Devcontainer を使用することを前提としています。
+Docker と VS Code の拡張機能 [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) を使用することを前提としています。
 
 ## 検証済み環境
 
@@ -44,3 +44,4 @@ $ php index.php
 # プロジェクト
 
 - [GuessTheNumberGame](https://github.com/shimanamisan/recoursion-backend-project-for-php/tree/main/public/GuessTheNumberGame)
+- [FileManipulatorProgram](https://github.com/shimanamisan/recoursion-backend-project-for-php/tree/main/public/FileManipulatorProgram)
