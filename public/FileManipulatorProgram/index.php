@@ -16,9 +16,9 @@ try {
 
     $handle->execute();
 
-    echo "正常に終了しました"
+    echo "正常に終了しました\n";
 
-    ecit(0);
+    exit(0);
 
 } catch(\Exception $e) {
 

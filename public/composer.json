@@ -14,7 +14,11 @@
     "autoload": {
         "psr-4": {
             "GuessTheNumberGame\\": "GuessTheNumberGame",
-            "FileManipulatorProgram\\": "FileManipulatorProgram"
+            "FileManipulatorProgram\\": "FileManipulatorProgram",
+            "MarkdownToHTMLConverter\\": "MarkdownToHTMLConverter"
         }
+    },
+    "require": {
+        "league/commonmark": "^2.4"
     }
 }
