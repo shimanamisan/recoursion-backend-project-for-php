@@ -1,14 +1,16 @@
 FROM php:8.2.8-fpm
 
 RUN apt-get update && \
-  apt-get -y install git libicu-dev libonig-dev libzip-dev unzip locales && \
+  apt-get -y install git libicu-dev libonig-dev libzip-dev unzip locales \ 
+  procps iputils-ping net-tools git lsof strace && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* && \
   locale-gen en_US.UTF-8 && \
   localedef -f UTF-8 -i en_US en_US.UTF-8 && \
   mkdir /var/run/php-fpm && \
   mkdir /var/log/php && \
-  docker-php-ext-install intl pdo_mysql mbstring zip bcmath && \
+  # pcntlをインストール
+  docker-php-ext-install intl pdo_mysql mbstring zip bcmath pcntl && \
   pecl install xdebug && \
   # Xdebug を有効化する
   docker-php-ext-enable xdebug
