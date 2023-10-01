@@ -20,11 +20,11 @@ $ cd public/VideoCompressor/LocalChatMessenger
 
 メッセージを受けるサーバ側のプログラムを実行します。
 
-![php-local-chat-messenger](https://github.com/shimanamisan/recoursion-backend-project-for-php/assets/49751604/3b9c5064-c7c4-453f-bc30-f8a41feef0a5)
-
 ```bash
 $ php server.php
 ```
+
+![php-local-chat-messenger](https://github.com/shimanamisan/recoursion-backend-project-for-php/assets/49751604/3b9c5064-c7c4-453f-bc30-f8a41feef0a5)
 
 メッセージを送信するクライアント側のプログラムを実行し、受け取りたいメッセージを選択します。
 
