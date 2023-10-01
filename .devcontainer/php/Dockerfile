@@ -10,10 +10,12 @@ RUN apt-get update && \
   mkdir /var/run/php-fpm && \
   mkdir /var/log/php && \
   # pcntlをインストール
-  docker-php-ext-install intl pdo_mysql mbstring zip bcmath pcntl && \
+  docker-php-ext-install intl pdo_mysql mbstring zip bcmath pcntl sockets && \
   pecl install xdebug && \
   # Xdebug を有効化する
-  docker-php-ext-enable xdebug
+  docker-php-ext-enable xdebug && \
+  # 名前付きパイプの出力先 /data/temp/ ディレクトリを作成する
+  mkdir -p /data/temp/
 
 COPY ./php-fpm.d/zzz-www.conf /usr/local/etc/php-fpm.d/zzz-www.conf
 COPY ./php.ini /usr/local/etc/php/php.ini
@@ -37,4 +39,7 @@ RUN useradd -m -s /bin/bash user01 && \
     # Xebugで使用するログファイルの作成とファイルへのアクセス権限を付与する
     touch /var/log/xdebug.log && \
     chown user01:user01 /var/log/xdebug.log && \
-    chmod 644 /var/log/xdebug.log
+    chmod 644 /var/log/xdebug.log && \
+    # /data/temp/ ディレクトリのアクセス権限の変更
+    chown -R user01:user01 /data/temp/ && \
+    chmod -R 700 /data/temp/

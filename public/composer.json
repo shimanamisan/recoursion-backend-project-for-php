@@ -15,10 +15,12 @@
         "psr-4": {
             "GuessTheNumberGame\\": "GuessTheNumberGame",
             "FileManipulatorProgram\\": "FileManipulatorProgram",
-            "MarkdownToHTMLConverter\\": "MarkdownToHTMLConverter"
+            "MarkdownToHTMLConverter\\": "MarkdownToHTMLConverter",
+            "VideoCompressor\\": "VideoCompressor"
         }
     },
     "require": {
-        "league/commonmark": "^2.4"
+        "league/commonmark": "^2.4",
+        "fakerphp/faker": "^1.23"
     }
 }
