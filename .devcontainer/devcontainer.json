@@ -1,7 +1,7 @@
 {
     // INFO: https://bufferings.hatenablog.com/entry/2020/06/11/233201
     // INFO: https://techblog.roxx.co.jp/entry/2021/04/19/132838
-    "name": "recoursion-coding-enviroment-for-php",
+    "name": "recoursion-backend-project-for-php",
     "dockerComposeFile": "docker-compose.yml",
     // docker-compose.ymlファイル内のどのサービスをVS Codeで操作するか指定する
     "service": "app",
