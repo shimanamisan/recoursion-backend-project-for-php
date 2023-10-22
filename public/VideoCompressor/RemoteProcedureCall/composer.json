@@ -1,0 +1,5 @@
+{
+    "require": {
+        "datto/json-rpc": "^6.1"
+    }
+}

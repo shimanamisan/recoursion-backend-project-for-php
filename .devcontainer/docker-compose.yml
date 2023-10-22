@@ -1,5 +1,10 @@
 version: "3.9"
 
+networks:
+  external-api-net:
+    name: recoursion-backend-project-external-api
+    external: true
+      
 volumes:
   php-fpm-socket:
     name: recoursion-backend-project-for-php_php-fpm-socket
@@ -15,3 +20,6 @@ services:
     volumes:
       - php-fpm-socket:/var/run/php-fpm
       - ../:/workspace:cached
+    networks:
+      external-api-net:
+        ipv4_address: 192.168.1.3
