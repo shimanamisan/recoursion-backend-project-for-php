@@ -21,6 +21,7 @@
     },
     "require": {
         "league/commonmark": "^2.4",
-        "fakerphp/faker": "^1.23"
+        "fakerphp/faker": "^1.23",
+        "datto/json-rpc": "^6.1"
     }
 }
